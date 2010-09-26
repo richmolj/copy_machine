@@ -1,7 +1,7 @@
 Copy Machine
 ============
 
-Ever had to pull records from production to debug an issue, or had a sprawling legacy app with no seeds.rb and a need for development data? Using CopyMachine, this is fixed in two ways -  either dynamically pull data from a slave database whenever no records are found, or define dataset templates that pull in data with a rake task. Whenever a copy happens, you'll get a growl notice, a small button in the top left of your app, or both.
+Ever had to pull records from production to debug an issue, or had a sprawling legacy app with no seeds.rb and a need for development data? Using CopyMachine, this is fixed in two ways -  either dynamically pull data from a slave database whenever no records are found, or define dataset templates that pull in data with a rake task. Whenever a copy happens, you'll get a growl notice, a small button in the top left of your app, or both. These will contain the sql and line number that fired the copy (click the button for additional info).
 
 The main benefits of CopyMachine are 1) No hassles and easy set up 2) Easily pull associations and 3) never fire callbacks or validations.
 
@@ -50,9 +50,9 @@ You'll get prompted for the id you want to copy, and your response will set the 
 
 **templates/my_model_template.rb**
 
-  define_dataset :foo, :needs => [:bar] do
-    MyModel.find_by_bar(@bar)
-  end  
+    define_dataset :foo, :needs => [:bar] do
+      MyModel.find_by_bar(@bar)
+    end  
 
 Could be called by
 
