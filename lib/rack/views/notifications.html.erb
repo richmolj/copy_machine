@@ -1,0 +1,29 @@
+<script type="text/javascript" charset="utf-8">
+  if (typeof jQuery == 'undefined') {
+    var jquery_url = '/__rack_copy_machine__/jquery-1.4.2.min.js';
+    document.write(unescape('%3Cscript src="' + jquery_url + '" type="text/javascript"%3E%3C/script%3E'));
+  }
+</script>
+<script type="text/javascript" src="/__rack_copy_machine__/copy_machine.js"></script>
+<style type="text/css" media="screen">
+  @import url(/__rack_copy_machine__/copy_machine.css);
+</style>
+
+<% unless ::CopyMachine.notifications.empty? %>
+<span class="cm_notifier">
+Copy Machine
+  <span class="cm_close_button">
+  </span>
+</span>
+
+<table id="copy_machine_traces" style="display:none">
+  <tbody>
+    <% ::CopyMachine.notifications.each do |n| %>
+      <tr>
+        <td><%= n[:backtrace] %></td>
+        <td><%= n[:sql] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

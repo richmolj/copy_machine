@@ -1,0 +1,65 @@
+.cm_notifier {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  height: 20px;
+  width: 115px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+  padding-right: 5px;
+  color: #404040;
+  font-family: "Lucida Grande",Tahoma,Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+  background-color: #b0b0b0;
+  background-image: -moz-linear-gradient(top, #e0e4ec, #bdc1c9);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#e0e4ec), to(#bdc1c9));
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  border: 1px solid #787e85;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  -moz-border-radius-bottomleft: 0.3em;
+  -moz-border-radius-bottomright: 0.3em;
+  -webkit-border-bottom-left-radius: 1em;
+  -webkit-border-bottom-right-radius: 1em;
+  cursor: pointer;
+}
+
+.cm_notifier:hover {
+  border: solid 1px;
+}
+
+.cm_close_button {
+  float: left;
+  margin-left: 8px;
+  margin-top: 1px;
+  width: 10px;
+  border: 1px solid;
+  vertical-align: text-top;
+  padding-bottom: 2px;
+  height: 10px;
+  background-image: -moz-linear-gradient(top, #b0b0b0, #f0f0f0);
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+}
+
+.cm_close_button:hover {
+  background-image: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+}
+
+#copy_machine_traces {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  color: #404040;
+  font-family: "Lucida Grande",Tahoma,Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+  background-image: -moz-linear-gradient(top, #bdc1c9, #e0e4ec);
+}
+
+#copy_machine_traces td {
+  background-color: white;
+  padding: 5px;
+}
